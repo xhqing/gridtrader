@@ -9,4 +9,4 @@ pip install pipenv
 ```bash
 pipenv install
 ```
-即可安装完所有依赖包。
+即可安装完所有依赖包(都写在Pipfile里面)。
