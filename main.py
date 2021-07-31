@@ -31,5 +31,16 @@ if __name__ == "__main__":
         6: 'Years',
         7: 'NoTimeFrame'}
 
+    # ALL SETTINGS HERE
+    filename = './binance-segment.csv' # csv file filename
+    """
+    Note: The order and the name of each column must be exactly the same like this: \
+            ['time', 'open', 'high', 'low', 'close', 'volume']
+    """
+    timeframe = timeframe_dict[2] # select your data's timeframe
+    all_cash = 100000.00
+    gridrun(filename, timeframe, all_cash)
+
+
 
         
