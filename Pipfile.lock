@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c88c8a3ed21474d0be944eb88633cc83d04a342a6df0a71fdb6f86b44bd6e67c"
+            "sha256": "72ad4aff21d2b5daee90f92e984802f08e5515ed4f0642edff3b1564c5433979"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -22,6 +22,14 @@
             ],
             "index": "pypi",
             "version": "==1.9.76.123"
+        },
+        "baostock": {
+            "hashes": [
+                "sha256:e5c5b81257f900f520700516e072a46d36870de88c0b4d715406f97ed1a4e479",
+                "sha256:f7b0466a71ce0c70cecf7b02f5631d4cb400a04b8a5a9c330c1b0d29dcdab97d"
+            ],
+            "index": "pypi",
+            "version": "==0.8.8"
         },
         "numpy": {
             "hashes": [
