@@ -32,7 +32,7 @@ if __name__ == "__main__":
         7: 'NoTimeFrame'}
 
     # ALL SETTINGS HERE
-    filename = './binance-segment.csv' # csv file filename
+    filename = './data/binance-segment.csv' # csv file filename
     """
     Note: The order and the name of each column must be exactly the same like this: \
             ['time', 'open', 'high', 'low', 'close', 'volume']
