@@ -1,0 +1,25 @@
+# Pipenv 虚拟环境（本机生成，不入库）
+.venv/
+
+# Python 字节码缓存（本地生成，不入库）
+__pycache__/
+*.pyc
+
+# Claude Code 个人本地配置（permissions + autoMemoryDirectory 绝对路径），仅本机、不入库；
+# clone 者复制 .claude/settings.local.example.json → settings.local.json 后按本机路径填
+.claude/settings.local.json
+
+# hook 运行时状态文件（memory 变更标记 / diff checkpoint，机器本地）
+.claude/.memory-changed-this-session
+.claude/.last-memory-checkpoint
+
+# 临时产物目录（预览图、调试快照、一次性脚本等），不入库
+tmp/
+
+# 本机密钥通用兜底（保留 .env.example）
+.env
+.env.*
+!.env.example
+
+# 系统杂物
+.DS_Store

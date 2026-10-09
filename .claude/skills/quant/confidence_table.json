@@ -1,0 +1,16 @@
+{
+  "mom_breakout_vol1.5x": {
+    "win_rate": 0.39342948717948717,
+    "avg_R": 0.21097082956068314,
+    "samples": 1248,
+    "net_avg_R": 0.1966177727206697,
+    "low_sample": false
+  },
+  "mom_breakout_vol2x": {
+    "win_rate": 0.43675417661097854,
+    "avg_R": 0.35120866625571684,
+    "samples": 838,
+    "net_avg_R": 0.33816787171787,
+    "low_sample": false
+  }
+}
