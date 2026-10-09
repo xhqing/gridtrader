@@ -2,7 +2,12 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
-## [Unreleased]
+## [0.1.0] - 2026-10-09
+
+### 新增（项目标配补全：README 双语化 + LOGO + 徽章 + LICENSE.md + 检测缓存）
+
+- **为什么改**（2026-10-09）：commit skill 第 9 步标配检测发现本仓库缺多项项目标配——README 双语 + LOGO + 标准徽章 + 版权署名段、LICENSE.md、GitHub About、检测缓存等（均为此前缺失项），按该 skill 规则缺则补全。
+- **改了什么**（2026-10-09）：① `README.md` 正文由中文改写为英文（面向全球读者）、结构标准化（LOGO / 徽章 / 工作原理 / 快速开始 / 目录结构 / 版权署名）；② 新增 `README_cn.md` 中文版（与英文版镜像、两版相互跳转）；③ 新增 `assets/logo.svg`（640×200 圆角渐变横幅：🔳 + 项目名 + 定位副标题，已过 icon-design 文字边界硬校验）；④ 新增 `LICENSE.md`（MIT、版权人 `All Contributors`，附中英双语投资风险免责条款，与兄弟仓库同模板）；⑤ GitHub About 补中英双语 description + topics（quant / grid-trading / backtrader / backtesting / python / ai-agent / claude-code）；⑥ 新增 `.commit-cache.md`（commit skill 检测缓存）；⑦ CHANGELOG 顶部 `[Unreleased]` 改为 `[0.1.0] - 2026-10-09`（版本标题与 VERSION 对齐——本仓库尚未发布过 Release，0.1.0 为首版）。
 
 ### 变更（AutoMemory 遗留文件不入库：memory/ 与 settings 模板归档移出）
 
