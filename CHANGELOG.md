@@ -2,6 +2,13 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [Unreleased]
+
+### 变更（智能体专属文件清理：CLAUDE.md / .claude 删除）
+
+- **为什么改**（2026-10-12）：全局新规「智能体专属文件只属于 Agent 项目」（`~/.claude/docs/agents-registry.md`「智能体专属文件归属与子项目映射（2026-10-12 修订）」，取代原「子项目 `.claude/` 超集」规则）：`CLAUDE.md`、`AGENTS.md`、`.claude/`、项目级 `.pi/` 等「会话启动时按工作目录加载、表征智能体身份」的项目级文件只有 Agent 项目允许拥有，非 Agent 项目（含本子项目）一律不得存在；后台会话只能以 Agent 项目根目录为工作目录。
+- **改了什么**（2026-10-12）：删除 `CLAUDE.md`、`.claude/`（quant skill 副本、空的 `commands/`、本机 `settings.local.json`）；`.gitignore` 移除全部 `.claude/*` 规则；`README.md` / `README_cn.md` 目录树去掉 `.claude/skills/quant/` 行。核查：`main.py` / `gridtrader.py` 不依赖 `.claude/`（回测读 `data/` 下 CSV），无脚本受影响；quant skill 权威源仍在主仓库 QuantStrategistAgent 的 `.claude/skills/quant/`。
+
 ## [0.1.0] - 2026-10-09
 
 ### 新增（项目标配补全：README 双语化 + LOGO + 徽章 + LICENSE.md + 检测缓存）

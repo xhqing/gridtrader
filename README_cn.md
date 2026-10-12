@@ -49,8 +49,7 @@ gridtrader/
 ├── get_data_scripts/
 │   └── get_data.py          # 样例 A 股日 K 拉取脚本（baostock）
 ├── data/                    # 样例数据（CSV）：沪深 300、单只 A 股、币安分段
-├── Pipfile / Pipfile.lock   # 依赖（pandas / backtrader / baostock）
-└── .claude/skills/quant/    # 量化 skill（QuantStrategistAgent 的超集副本）
+└── Pipfile / Pipfile.lock   # 依赖（pandas / backtrader / baostock）
 ```
 
 ## 版权与署名

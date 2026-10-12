@@ -49,8 +49,7 @@ gridtrader/
 ├── get_data_scripts/
 │   └── get_data.py          # Sample A-share daily-K fetcher (baostock)
 ├── data/                    # Sample datasets (CSV): CSI 300, one A-share, segmented Binance
-├── Pipfile / Pipfile.lock   # Dependencies (pandas / backtrader / baostock)
-└── .claude/skills/quant/    # Quant skill (superset copy from QuantStrategistAgent)
+└── Pipfile / Pipfile.lock   # Dependencies (pandas / backtrader / baostock)
 ```
 
 ## License & attribution
