@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" /></a>
-  <img src="https://img.shields.io/badge/Version-0.1.0-blue.svg" alt="Version: 0.1.0" />
+  <img src="https://img.shields.io/badge/Version-0.1.1-blue.svg" alt="Version: 0.1.1" />
   <img src="https://img.shields.io/badge/Type-Quant%20Tool-7C3AED.svg" alt="Type: Quant Tool" />
 </p>
 
