@@ -2,7 +2,7 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
-## [Unreleased]
+## [0.1.1] - 2026-10-12
 
 ### 变更（智能体专属文件清理：CLAUDE.md / .claude 删除）
 
