@@ -2,7 +2,7 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
-## [Unreleased]
+## [0.1.2] - 2026-10-17
 
 ### 变更（2026-10-17 新规：Agent 进驻子项目——挂 AGENTS.md / .pi 两条指回软链）
 
