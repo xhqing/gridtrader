@@ -2,6 +2,13 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [Unreleased]
+
+### 变更（2026-10-17 新规：Agent 进驻子项目——挂 AGENTS.md / .pi 两条指回软链）
+
+- **为什么改**（2026-10-17 用户决定）：全局规则修订「智能体专属文件归属与子项目映射（2026-10-17 修订）」，取代 2026-10-12 的「子项目不得存在」：智能体专属文件的**实体只在 Agent 项目**，子项目不放实体、不复制内容；每个子项目根目录挂两条相对路径软链接 `AGENTS.md → ../QuantStrategistAgent/AGENTS.md`、`.pi → ../QuantStrategistAgent/.pi`（随仓库提交），在子项目目录开会话即继承 Markowitz 的身份 / 规则 / 技能 / 扩展 / 设置（「Agent 进驻子项目」）；后台开启 / 唤醒会话仍只以 Agent 项目根为工作目录。
+- **改了什么**（2026-10-17）：新增 `AGENTS.md`、`.pi` 两条软链接（均指向同级目录的 QuantStrategistAgent 项目；`.pi` 经其 `skills -> ../.claude/skills` 解析到 quant skill，本仓库不再持有任何副本）。quant skill 权威源仍在主仓库；子项目内不再有其他智能体专属文件。
+
 ## [0.1.1] - 2026-10-12
 
 ### 变更（智能体专属文件清理：CLAUDE.md / .claude 删除）
