@@ -2,6 +2,13 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [Unreleased]
+
+### 变更（Agent 拟人名更名：Markowitz → Mark）
+
+- **为什么改**（2026-10-17 用户决定）：用户要求把本体系 agent 的拟人名从「Markowitz」改为「Mark」（项目名 QuantStrategistAgent 不变）；全局命名注册表、全局 CLAUDE.md 缩写约定、xhqing 主页名册与采集脚本由 Kit 会话统一更新。
+- **改了什么**（2026-10-17）：`README.md` / `README_cn.md` 子项目说明中的拟人名由 Markowitz 改为 Mark。历史条目保持原样不改。
+
 ## [0.1.2] - 2026-10-17
 
 ### 变更（2026-10-17 新规：Agent 进驻子项目——挂 AGENTS.md / .pi 两条指回软链）

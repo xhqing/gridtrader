@@ -14,7 +14,7 @@
 
 **gridtrader** is a grid-trading strategy development and backtesting toolset built on [backtrader](https://github.com/mementum/backtrader): it fetches A-share daily-K data via baostock (`get_data_scripts/get_data.py`), runs grid backtests from CSV data (`main.py`'s `gridrun()` plus the `GridStrategy` in `gridtrader.py`), and ships sample datasets under `data/` (CSI 300 index, a single A-share, and a segmented Binance series). Dependencies are managed with Pipenv.
 
-> A sub-project of [QuantStrategistAgent](https://github.com/xhqing/QuantStrategistAgent) (Markowitz), the quant-strategy agent of the xhqing AI agent team. Research tooling only: **not for live trading, not financial advice.**
+> A sub-project of [QuantStrategistAgent](https://github.com/xhqing/QuantStrategistAgent) (Mark), the quant-strategy agent of the xhqing AI agent team. Research tooling only: **not for live trading, not financial advice.**
 
 ## How it works
 
