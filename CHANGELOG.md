@@ -4,6 +4,13 @@
 
 ## [Unreleased]
 
+### 变更（子项目 `.pi` 由软链接改为真实目录 + 资源引用：全局规矩 2026-10-30 修订）
+
+- **为什么改**：全局 `~/.pi/agent/docs/agents-registry.md`「智能体专属文件归属与子项目映射（2026-10-30 修订）」取代 2026-10-17 版。旧形态把 `.pi` 整个挂成指向 QuantStrategistAgent 的软链接，把「共享」和「独占」压在了同一个符号上：本仓库要放自己的配置时无处安放，硬写进 `.pi` 等于直接写进 Agent 项目——会影响到 Mark 的全部兄弟子项目、还会进 Agent 仓库的 git 历史。而 `AGENTS.md` 没有 include 机制，做超集只能靠复制、复制必然漂移。新规则分层：身份层 `AGENTS.md` 继续用软链接保持一致，能力层 `.pi/` 改成本仓库的真实目录、用 `settings.json` 以路径引用 Agent 项目的资源目录，本地专属内容放自己的目录——行为上是超集，结构上无副本、不漂移。
+- **改了什么**：删除 `.pi` 软链接（原指向 `../QuantStrategistAgent/.pi`），改为真实目录加 `.pi/settings.json`：`extensions` / `skills` / `prompts` / `themes` 四组各指向 `~/Developer/QuantStrategistAgent/.pi/` 下的对应目录，并附带本地 `./extensions` / `./skills` / `./prompts` / `./themes`（本地目录不存在时自动跳过）。`AGENTS.md` 软链接保持不变。本项仅涉及开发环境配置，不影响网格回测脚本与版本号。
+- **验证**：据 pi 官方文档（`settings.md`「Resources」——项目 `.pi/settings.json` 的路径相对 `.pi` 解析、支持 `~`、路径可为目录并递归收集；`skills.md` / `extensions.md`——`.pi/{skills,extensions,prompts,themes}` 的自动发现照常生效）；同批在 `Intraday` 子项目实跑 `pi --approve -p` 跑通，技能 `quant` 正常加载（来自 Agent 项目，经其 `.pi/skills -> ../.claude/skills` 解析），本仓库 `.pi/settings.json` 内容与之完全一致。
+- **规则出处**：全局 `~/.pi/agent/docs/agents-registry.md`「智能体专属文件归属与子项目映射（2026-10-30 修订）」节。
+
 ### 变更（Agent 拟人名更名：Markowitz → Mark）
 
 - **为什么改**（2026-10-17 用户决定）：用户要求把本体系 agent 的拟人名从「Markowitz」改为「Mark」（项目名 QuantStrategistAgent 不变）；全局命名注册表、全局 CLAUDE.md 缩写约定、xhqing 主页名册与采集脚本由 Kit 会话统一更新。

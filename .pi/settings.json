@@ -1,0 +1,6 @@
+{
+  "extensions": ["~/Developer/QuantStrategistAgent/.pi/extensions", "./extensions"],
+  "skills":     ["~/Developer/QuantStrategistAgent/.pi/skills", "./skills"],
+  "prompts":    ["~/Developer/QuantStrategistAgent/.pi/prompts", "./prompts"],
+  "themes":     ["~/Developer/QuantStrategistAgent/.pi/themes", "./themes"]
+}
