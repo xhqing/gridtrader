@@ -10,6 +10,12 @@
 
 ## [Unreleased]
 
+### 新增（`.pi/APPEND_SYSTEM.md`：本仓库的项目级硬约束）
+
+- **为什么改**：用户 2026-11-07 定下全局 Leader / Worker 分工——Agent 项目根目录的会话是 Leader（同步 local main、建 worktree、派任务、收尾），子项目根 / 子项目 worktree 的会话是 Worker（只在 worktree 里干具体活）。子项目之所以独立成仓库，正是因为它有专属规则与工具；这些规则不能上提到 Agent 项目（一上提就污染兄弟子项目），而 pi 只加载 cwd 这一层的 `.pi/`、不向上继承，所以必须落在子项目自己的 `.pi/APPEND_SYSTEM.md` 里，Worker 启动即加载。
+- **改了什么**（2026-11-07）：新增 `.pi/APPEND_SYSTEM.md`（37 行），只写本仓库特有的硬约束——① 默认分支是 `master`（不是 main），PR 目标填 master；② 数据契约：`data/` 下的 CSV 既是示例也是回测基准，不许覆盖 / 原地替换，`gridrun()` 要求严格 6 列顺序（`time,open,high,low,close,volume`），两份 A 股 CSV 是 baostock 原始导出的 14 列、需另存才能回测；③ 环境：依赖一律 Pipenv（`Pipfile` 声明 Python 3.7）管理，不全局 pip install；④ 策略口径：1440 根中轨、±2.5% 区间、0.5% 间距 11 档、`order_target_percent` 调仓，改参数必须附改动前后账户价值对比并记 CHANGELOG；⑤ 运行入口。
+- **边界**：只追加本仓库专属规则，不重述 Agent 身份与全局规则（身份层由 `AGENTS.md` 软链接提供、通用规则见全局 `~/.pi/agent/AGENTS.md`）；不改动任何回测代码、样例数据与版本号。
+
 ### 变更（子项目 `.pi` 由软链接改为真实目录 + 资源引用：全局规矩 2026-10-30 修订）
 
 - **为什么改**：全局 `~/.pi/agent/docs/agents-registry.md`「智能体专属文件归属与子项目映射（2026-10-30 修订）」取代 2026-10-17 版。旧形态把 `.pi` 整个挂成指向 QuantStrategistAgent 的软链接，把「共享」和「独占」压在了同一个符号上：本仓库要放自己的配置时无处安放，硬写进 `.pi` 等于直接写进 Agent 项目——会影响到 Mark 的全部兄弟子项目、还会进 Agent 仓库的 git 历史。而 `AGENTS.md` 没有 include 机制，做超集只能靠复制、复制必然漂移。新规则分层：身份层 `AGENTS.md` 继续用软链接保持一致，能力层 `.pi/` 改成本仓库的真实目录、用 `settings.json` 以路径引用 Agent 项目的资源目录，本地专属内容放自己的目录——行为上是超集，结构上无副本、不漂移。
