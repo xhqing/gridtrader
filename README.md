@@ -56,7 +56,7 @@ gridtrader/
 
 This project is released under the MIT License, and you are additionally asked to **credit the author and cite the source** whenever you use, redistribute, or build upon it:
 
-- **Author:** xhqing
+- **Author:** xhqing <https://github.com/xhqing>
 - **Project:** gridtrader — grid-trading strategy development & backtesting toolset (QuantStrategistAgent sub-project)
 - **Main repository:** https://github.com/xhqing/QuantStrategistAgent
 
