@@ -2,6 +2,14 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [0.1.3] - 2026-11-23
+
+### 变更（从 quant-agent 抽回为独立仓库，默认分支 master → main）
+
+- **为什么改**：用户 2026-11-23 要求把 `Intraday` / `Swing` / `gridtrader` 从 quant-agent 抽回、各自恢复为独立仓库，作为 Mark 名下的子项目（2026-11-08 曾把三个仓库并入 quant-agent 成为三个目录），并把本仓库默认分支由 `master` 改名为 `main`、与团队其它仓库统一。
+- **改了什么**：① 内容同步为并入期间的最新版（项目更名 quant-agent、`xhqing and contributors` 署名口径等）；② 分支改名 `master` → `main`（GitHub rename API，分支保护 `validate` required + strict 随分支保留），`.github/workflows/validate.yml` 的 push 触发分支同步改为 `main`；③ `AGENTS.md` 由指向 Agent 项目的软链接改为本仓库实体文件，写明子项目归属、Worker 边界与版本 / 分支权威；④ 删除跨仓库路径已失效的 `.pi/settings.json`；⑤ `LICENSE.md` 版权行统一为 `Copyright (c) 2026 xhqing and contributors`；⑥ 补 `CONTRIBUTING.md` / `CONTRIBUTING_cn.md`；⑦ VERSION 0.1.2 → 0.1.3，双语 README 徽章同步。
+- **回归风险**：无——`gridtrader.py` / `main.py` 的策略逻辑、参数与 `data/` 下的基准 CSV 一字未改，只动仓库形态、分支名与文档。
+
 ### 新增（CI 门禁：validate 检查 + master 分支 strict 保护）
 
 - **为什么改**：用户 2026-11-03 立规「新建仓库一律必须 strict 模式的 PR CI」，并要求 28 个不合规的存量仓库统一执行最新标准。本项目此前在 PR 上没有门禁——改动合进 master 全靠人工把关，PR 可以拿旧 master 上通过的检查直接合并，回归防护存在缺口。本次补齐团队要求的「三件套」：PR 上真实跑的 CI 检查 + 挂成 required status check + `required_status_checks.strict = true`。
