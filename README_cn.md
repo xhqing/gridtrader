@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" /></a>
-  <img src="https://img.shields.io/badge/Version-0.1.2-blue.svg" alt="Version: 0.1.2" />
+  <img src="https://img.shields.io/badge/Version-0.1.3-blue.svg" alt="Version: 0.1.3" />
   <img src="https://img.shields.io/badge/Type-Quant%20Tool-7C3AED.svg" alt="Type: Quant Tool" />
 </p>
 
@@ -14,7 +14,7 @@
 
 **gridtrader** 是基于 [backtrader](https://github.com/mementum/backtrader) 的网格交易策略开发与回测工具集：用 baostock 拉 A 股日 K（`get_data_scripts/get_data.py`），从 CSV 数据跑网格回测（`main.py` 的 `gridrun()` + `gridtrader.py` 的 `GridStrategy`），`data/` 下附样例数据集（沪深 300 指数、单只 A 股、币安分段序列）。依赖用 Pipenv 管理。
 
-> 本项目是 [QuantStrategistAgent](https://github.com/xhqing/QuantStrategistAgent)（Mark）的子项目——xhqing AI agent 团队的量化工作线。仅为研究工具：**不用于实盘、不构成投资建议。**
+> 本项目是 [quant-agent](https://github.com/xhqing/quant-agent)（Mark）的子项目——xhqing AI agent 团队的量化工作线。仅为研究工具：**不用于实盘、不构成投资建议。**
 
 ## 工作原理
 
@@ -56,8 +56,8 @@ gridtrader/
 
 本项目以 MIT 许可证发布，额外请求使用者在**使用、二次分发或基于本项目构建衍生作品**时，注明作者并引用项目地址：
 
-- **作者：** xhqing <https://github.com/xhqing>
-- **项目：** gridtrader —— 网格交易策略开发及回测工具集（QuantStrategistAgent 子项目）
-- **主仓库：** https://github.com/xhqing/QuantStrategistAgent
+- **作者：** xhqing
+- **项目：** gridtrader —— 网格交易策略开发及回测工具集（quant-agent 子项目）
+- **主仓库：** https://github.com/xhqing/quant-agent
 
 若你引用代码或基于本仓库二次开发，请在文档 / README / 致谢中保留以上出处。
