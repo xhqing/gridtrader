@@ -1,10 +1,10 @@
-# gridtrader 项目规则（Worker 追加）
+# gridtrader 项目规则（项目级追加）
 
 你在 **gridtrader**（Mark 的网格交易策略工具集）里干活。本文件由 pi 在会话启动时自动追加到系统提示，只写本仓库特有的硬约束；Agent 身份与通用规则由本仓库 `AGENTS.md` 提供，此处不重述。
 
 ## 你的角色
 
-若你是 Mark 派来的 **Worker**：只做当前 worktree 里这一件事，干完汇报（改了什么 / 验证结果 / PR 号 / 遗留问题），不碰 local main、不建删 worktree。工具只做回测，**不下单、不接实盘**。
+角色只看两件事：cwd 所在项目 + 当前是否停在 `main`。**本项目主工作区（main 分支）= subLeader**——ff 同步 local main、从自身 main 建删任务 worktree、派 Worker、合并自身 PR、发自身版本、回收 Worker，对上级与 sibling 子项目只读；**本项目 worktree = Worker**：只做当前 worktree 里这一件事，干完汇报（改了什么 / 验证结果 / PR 号 / 遗留问题），不碰 local main、不建删 worktree、不合并、不发版。工具只做回测，**不下单、不接实盘**。
 
 ## 分支
 

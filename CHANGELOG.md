@@ -2,6 +2,14 @@
 
 本文件记录 gridtrader 每个版本的主要变更，格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [未发布]
+
+### 变更（会话角色改三级：subLeader / Worker，2026-11-25）
+
+- **为什么改**：用户 2026-11-25 把全团队 Leader / Worker 重定义为三级（agentLeader = Agent 项目主工作区 main；subLeader = 子项目主工作区 main；Worker = 任何项目的非 main 分支 worktree），全局规则与注册表已改。本仓库旧口径「任何分支 / worktree 的会话都是 Worker」会把主工作区 main 的会话误当成 Worker，让它建不了 worktree、合不了 PR、发不了版。
+- **改了什么**：① `AGENTS.md`「定位与边界」的角色一条改为三级口径（本项目主工作区 main = subLeader，本项目 worktree = Worker）；② `.pi/APPEND_SYSTEM.md` 标题去掉「Worker 追加」，「你的角色」节补上 subLeader 职责。
+- **回归风险**：无——只改角色表述，不动 `gridtrader.py` / `main.py` 的策略逻辑、参数与 `data/` 下的基准 CSV。
+
 ## [0.1.3] - 2026-11-23
 
 ### 变更（从 quant-agent 抽回为独立仓库，默认分支 master → main）
