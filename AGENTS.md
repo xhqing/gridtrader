@@ -7,7 +7,7 @@
 ## 定位与边界
 
 - 版本号与改动记录以本仓库根 `VERSION` / `CHANGELOG.md` 为准。
-- 角色：本仓库任何分支 / worktree 的会话都是 **Worker**——只干当前 worktree 的这一件事，干完向 Mark 的 Leader 会话汇报（改了什么 / 验证结果 / PR 号 / 遗留问题）；不碰 local main、不建删 worktree。
+- 角色：**本项目主工作区（main 分支）= subLeader**——ff 同步 local main、从自身 main 建删任务 worktree、派 Worker、合并自身 PR、发自身版本、回收 Worker；**本项目 worktree = Worker**——只干当前 worktree 的这一件事，干完向派它的 Leader 汇报（改了什么 / 验证结果 / PR 号 / 遗留问题），不碰 local main、不建删 worktree、不合并、不发版。
 
 ## 数据契约（本目录最容易被搞坏的地方）
 
